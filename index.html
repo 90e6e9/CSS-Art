@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Anna Yoshinari</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+            /* color setup */
+            :root {
+                --sky-color: rgb(140, 226, 226);
+                --main-branch-color: rgb(110, 87, 52);
+                --shadow-branch-color: rgb(65, 41, 38);
+                --main-flower-color: rgb(255, 247, 248);
+                --sec-flower-color: rgb(252, 237, 239);
+                --main-leaf-color: rgb(154, 201, 100);
+                --shadow-leaf-color: rgb(66, 175, 130);
+            }
+
+            .AnnaYoshinari {
+                /* Anna Yoshinari styles */
+                width: 100vw;
+                height: 500px;
+             }
+
+             /* sky bg */
+
+             .canvas {
+                background: var(--sky-color);
+                background: linear-gradient(0deg, rgba(174,220,221,1) 0%, rgba(140, 226, 226,1) 44%);
+                width: calc(100vw - 50px);
+                height: 450px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+             }
+
+             ul {
+                list-style-type: none;
+             }
+
+             /* branch */
+
+             .branch01 {
+                clip-path: polygon(100% 21%, 81% 21%, 73% 24%, 69% 25%, 56% 33%, 50% 36%, 37% 47%, 31% 57%, 19% 61%, 16% 64%, 26% 62%, 36% 55%, 41% 47%, 48% 40%, 55% 36%, 69% 30%, 74% 28%, 81% 25%, 100% 26%);
+                width: 1080px;
+                height: 500px;
+                 position: absolute;
+                top: 0;
+                right: 0;
+                 background-color: var(--main-branch-color);
+                 z-index: 1;
+             }
+
+             .branch01::before {
+                content: "";
+                background: var(--shadow-branch-color);
+                background: linear-gradient(0deg, rgba(65, 41, 38, 1) 0%, rgba(265, 41, 38, 0) 100%);
+                clip-path: polygon(100% 21%, 81% 21%, 73% 24%, 69% 25%, 56% 33%, 50% 36%, 37% 47%, 31% 57%, 19% 61%, 16% 64%, 26% 62%, 36% 55%, 41% 47%, 48% 40%, 55% 36%, 69% 30%, 74% 28%, 81% 25%, 100% 26%);
+                width: 1080px;
+                height: 500px;
+                position: absolute;
+                top: 7px;
+                right: 10px;
+             }
+
+             /* flowers */
+
+             .flower {
+                border-radius: 50%;
+                position: absolute;
+                background-color: var(--sec-flower-color);
+                width: 50px;
+                height: 50px;
+                z-index: 3;
+             }
+
+            #flower01 {
+                box-shadow: -3px -4px 8px 1px var(--sec-flower-color);
+                top: 70px;
+                right: 150px;
+            }
+
+            #flower02 {
+                box-shadow: -3px -4px 8px 1px var(--sec-flower-color);
+                top: 140px;
+                right: 500px;
+            }
+
+            #flower03 {
+                box-shadow: -3px -4px 8px 1px var(--sec-flower-color);
+                top: 130px;
+                right: 440px;
+            }
+
+            #flower04 {
+                box-shadow: -2px -2px 8px 1px var(--sec-flower-color);
+                top: 110px;
+                right: 500px;
+                width: 40px;
+                height: 40px;
+            }
+
+           #flower05 {
+                box-shadow: -2px -1px 8px 1px var(--sec-flower-color);
+                top: 200px;
+                right: 600px;
+                width: 60px;
+                height: 60px;
+            }
+
+            #flower06 {
+                top: 250px;
+                right: 630px;
+                width: 40px;
+                height: 40px;
+            }
+
+            #flower07 {
+                box-shadow: -2px -1px 8px 1px var(--sec-flower-color);
+                top: 220px;
+                right: 770px;
+
+            }
+
+            #flower08 {
+                box-shadow: -2px -1px 8px 1px var(--sec-flower-color);
+                top: 210px;
+                right: 830px;
+            }
+
+            #flower09 {
+                box-shadow: -2px -1px 8px 1px var(--sec-flower-color);
+                top: 240px;
+                right: 860px;
+            }
+
+            #flower10 {
+                box-shadow: -2px -1px 8px 1px var(--sec-flower-color);
+                top: 240px;
+                right: 915px;
+                width: 30px;
+                height: 30px;
+            }
+
+           #flower11 {
+                top: 310px;
+                right: 810px;
+           }
+
+           #flower12 {
+                top: 320px;
+                right: 760px;
+           }
+
+           #flower13 {
+                top: 300px;
+                right: 740px;
+           }
+
+           #flower14 {
+                top: 200px;
+                right: 500px;
+           }
+
+           #flower15 {
+                top: 300px;
+                right: 740px;
+           }
+
+           #flower16 {
+                top: 130px;
+                right: 300px;
+           }
+
+           #flower17 {
+                top: 150px;
+                right: 250px;
+           }
+
+           #flower18 {
+                top: 140px;
+                right: 220px;
+           }
+
+           #flower19 {
+                top: 140px;
+                right: 160px;
+           }
+
+           #flower20 {
+                top: 160px;
+                right: 130px;
+           }
+
+           #flower21 {
+                top: 120px;
+                right: 80px;
+           }
+
+            /* leaves */
+
+           .leaf {
+                background-color: var(--main-leaf-color);
+                position: absolute;
+                height: 100px;
+                width: 50px;
+                z-index: 0;
+           }
+             
+           #leaf01 {
+                top: 100px;
+                right: 570px;
+                transform: rotate(270deg);
+           }
+
+           #leaf01::before{
+                content: "";
+                background-color: var(--shadow-leaf-color);
+                height: 130px;
+                width: 55px;
+                position: absolute;
+                top: -16px;
+                left: 25px;
+                transform: rotate(-20deg);
+                border-radius: 0 100% 100% 0% / 50%;;
+                box-shadow: 2px -2px 3px 1px var(--shadow-leaf-color);
+           }
+
+           #leaf02 {
+                top: 150px;
+                right: 700px;
+                transform: rotate(170deg);
+           }
+
+           #leaf02::before{
+                content: "";
+                background-color: var(--shadow-leaf-color);
+                height: 110px;
+                width: 55px;
+                position: absolute;
+                top: -16px;
+                left: 25px;
+                transform: rotate(-20deg);
+                border-radius: 0 100% 100% 0% / 50%;;
+                box-shadow: 2px 2px 5px 1px var(--shadow-leaf-color);
+           }
+             
+           #leaf03 {
+                top: 200px;
+                right: 850px;
+                transform: rotate(120deg);
+           }
+
+           #leaf04 {
+                top: 280px;
+                right: 890px;
+                transform: rotate(70deg);
+           }
+
+           #leaf05 {
+                top: 300px;
+                right: 840px;
+                transform: rotate(50deg);
+           }
+
+           #leaf05::before{
+                content: "";
+                background-color: var(--shadow-leaf-color);
+                height: 110px;
+                width: 55px;
+                position: absolute;
+                top: -16px;
+                left: 25px;
+                transform: rotate(-20deg);
+                border-radius: 0 100% 100% 0% / 50%;;
+           }
+
+           #leaf06 {
+                top: 280px;
+                right: 690px;
+                transform: rotate(140deg);
+           }
+
+           #leaf07 {
+                top: 150px;
+                right: 450px;
+                transform: rotate(100deg);
+           }
+
+           #leaf07::before{
+                content: "";
+                background-color: var(--shadow-leaf-color);
+                height: 110px;
+                width: 55px;
+                position: absolute;
+                top: 10px;
+                left: 40px;
+                transform: rotate(20deg);
+                border-radius: 0 100% 100% 0% / 50%;;
+           }
+
+           #leaf08 {
+                top: 150px;
+                right: 250px;
+                transform: rotate(120deg);
+           }
+
+           #leaf09 {
+                top: 100px;
+                right: 150px;
+                transform: rotate(10deg);
+           }
+
+           #leaf10 {
+                top: 130px;
+                right: 100px;
+                transform: rotate(160deg);
+           }
+
+           #leaf10::before{
+                content: "";
+                background-color: var(--shadow-leaf-color);
+                height: 110px;
+                width: 55px;
+                position: absolute;
+                top: 5px;
+                left: 30px;
+                transform: rotate(20deg);
+                border-radius: 0 100% 100% 0% / 50%;;
+           }
+
+          
+
+        </style>
+    </head>
+    <body>
+
+        
+
+        <div class="AnnaYoshinari" style="background-color: var(--skycolor);"> 
+            <div class="canvas">
+                <ul>
+                    <li class="branch01"> </li>
+                    <li id="flower01" class="flower"> </li>
+                    <li id="flower02" class="flower"> </li>
+                    <li id="flower03" class="flower"> </li>
+                    <li id="flower04" class="flower"> </li>
+                    <li id="flower05" class="flower"> </li>
+                    <li id="flower06" class="flower"> </li>
+                    <li id="flower07" class="flower"> </li>
+                    <li id="flower08" class="flower"> </li>
+                    <li id="flower09" class="flower"> </li>
+                    <li id="flower10" class="flower"> </li>
+                    <li id="flower11" class="flower"> </li>
+                    <li id="flower12" class="flower"> </li>
+                    <li id="flower13" class="flower"> </li>
+                    <li id="flower14" class="flower"> </li>
+                    <li id="flower15" class="flower"> </li>
+                    <li id="flower16" class="flower"> </li>
+                    <li id="flower17" class="flower"> </li>
+                    <li id="flower18" class="flower"> </li>
+                    <li id="flower19" class="flower"> </li>
+                    <li id="flower20" class="flower"> </li>
+                    <li id="flower21" class="flower"> </li>
+                    <li id="leaf01" class="leaf"> </li>
+                    <li id="leaf02" class="leaf"> </li>
+                    <li id="leaf03" class="leaf"> </li>
+                    <li id="leaf04" class="leaf"> </li>
+                    <li id="leaf05" class="leaf"> </li>
+                    <li id="leaf06" class="leaf"> </li>
+                    <li id="leaf07" class="leaf"> </li>
+                    <li id="leaf08" class="leaf"> </li>
+                    <li id="leaf09" class="leaf"> </li>
+                    <li id="leaf10" class="leaf"> </li>
+      
+                </ul>
+            </div>
+  
+        </div>
+
+    </body>
+</html>
